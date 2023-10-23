@@ -2,5 +2,5 @@
 def raise_exception():
     try:
         raise Exception
-    except (Exception):
+    except Exception:
         print("Exception raised")
