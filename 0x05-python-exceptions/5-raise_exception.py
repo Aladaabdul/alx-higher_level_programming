@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def raise_exception():
     try:
-        raise Exception
-    except Exception:
+        raise TypeError
+    except:
         print("Exception raised")
