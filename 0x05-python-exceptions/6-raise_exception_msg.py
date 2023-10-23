@@ -2,5 +2,5 @@
 def raise_exception_msg(message=""):
     try:
         raise Exception
-    except:
+    except Exception:
         print("{}".format(message))
