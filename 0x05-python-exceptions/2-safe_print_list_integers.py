@@ -5,10 +5,10 @@ def safe_print_list_integers(my_list=[], x=0):
         for i in my_list:
             if numbers >= x:
                 break
-            if type(i) is not str:
+            if type(i) is int:
                 print("{:d}".format(i), end="")
                 numbers += 1
-    except (IndexError, TypeError, ValueError):
+    except IndexError:
         pass
     finally:
         print()
