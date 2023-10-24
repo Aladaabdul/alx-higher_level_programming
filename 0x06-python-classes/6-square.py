@@ -66,7 +66,7 @@ class Square:
 
         Returns: None
         """
-        if type(value) is not tuple and value or 2:
+        if type(value) is not tuple or value < 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             return self.__position
