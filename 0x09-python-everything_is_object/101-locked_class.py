@@ -5,16 +5,11 @@ class LockedClass:
     Attributes:
     first_name: String
 
-    Return: first_name
     """
+
     __slots__ = ["first_name"]
 
     def __init__(self):
-        """Class Initialization
+        """Class Initialization"""
 
-        Args:
-        FisrtName: string
-
-        Return: None
-        """
         self.first_name = "first_name"
