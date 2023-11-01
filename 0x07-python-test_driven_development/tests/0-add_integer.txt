@@ -1,0 +1,53 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> m = __import__("0-add_integer").__doc__
+>>> len(m) > 1
+True
+
+>>> f = __import__("0-add_integer").add_integer.__doc__
+>>> len(f) > 1
+True
+
+Basic Usage:
+
+	>>> add_integer(1, 2)
+	3
+
+Test int argument:
+	
+	>>> add_integer(2)
+	100
+
+Test int argument and check default second:
+	
+	>>> add_integer(0)
+	98
+
+Test positive int and negative int:
+
+	>>> add_integer(100, -2)
+	98
+
+Test negative int and positive int:
+
+	>>> add_integer(-2, 5)
+	3
+
+Test float and negative int:
+
+	>>> add_integer(100.3, -2)
+	98
+
+Test a None value:
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Test int and string value:
+	
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
