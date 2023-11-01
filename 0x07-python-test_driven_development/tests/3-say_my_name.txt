@@ -8,6 +8,10 @@ Test for the default parameter:
 	>>> say_my_name("Bob")
 	my name is Bob 
 
+Test for two letters:
+	>>> say_my_name("Bob", "Lenon")
+	my name is Bob Lenon
+
 Test for int and string:
 	>>> say_my_name(12, "white")
 	Traceback (most recent call last):
