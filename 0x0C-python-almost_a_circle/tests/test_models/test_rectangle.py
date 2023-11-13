@@ -18,6 +18,7 @@ class TestRectangle(unittest.TestCase):
     def test_2_0(self):
         """Checking for id."""
 
+
         r0 = Rectangle(1, 2)
         self.assertEqual(r0.id, 1)
         r1 = Rectangle(2, 3)
@@ -32,3 +33,17 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r5.id, -5)
         r6 = Rectangle(10, 2, 4, 5, 9)
         self.assertEqual(r6.id, 9)
+
+    def test_2_1(self):
+        """Checking for attributes values"""
+
+        r1 = Rectangle(10, 2)
+        self.assertEqual(r1.width, 10)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 0)
+        self.assertEqual(r1.y, 0)
+        r2 = Rectangle(10, 2, 4, 5, 24)
+        self.assertEqual(r2.width, 10)
+        self.assertEqual(r2.height, 2)
+        self.assertEqual(r2.x, 4)
+        self.assertEqual(r2.y, 5)
