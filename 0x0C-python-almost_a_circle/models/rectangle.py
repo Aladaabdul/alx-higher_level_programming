@@ -26,17 +26,17 @@ class Rectangle(Base):
         Return: None
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
         """getter for width
 
         """
-        return self.__width
+        return self.width
 
     @width.setter
     def width(self, value):
@@ -48,14 +48,14 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         else:
-            self.__width = value
+            self.width = value
 
     @property
     def height(self):
         """getter for height
 
         """
-        return self.__height
+        return self.height
 
     @height.setter
     def height(self, value):
@@ -67,14 +67,14 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         else:
-            self.__height = value
+            self.height = value
 
     @property
     def x(self):
         """getter for x
 
         """
-        return self.__x
+        return self.x
 
     @x.setter
     def x(self, value):
@@ -86,14 +86,14 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         else:
-            self.__x = value
+            self.x = value
 
     @property
     def y(self):
         """getter for y
 
         """
-        return self.__y
+        return self.y
 
     @y.setter
     def y(self, value):
@@ -105,7 +105,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         else:
-            self.__y = value
+            self.y = value
 
     def area(self):
         """Area function
