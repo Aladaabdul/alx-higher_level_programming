@@ -55,4 +55,4 @@ class Base:
         """Returning json list of json string representstion"""
         if json_string is None or json_string == "[]":
             return []
-        json.loads(json_string)
+        return json.loads(json_string)
