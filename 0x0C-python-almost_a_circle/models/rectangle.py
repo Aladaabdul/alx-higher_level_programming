@@ -6,7 +6,6 @@ from models.base import Base
 import json
 
 
-
 class Rectangle(Base):
     """Rectangle class inherit Base class
 
