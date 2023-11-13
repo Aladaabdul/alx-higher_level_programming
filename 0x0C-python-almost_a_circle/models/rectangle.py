@@ -6,6 +6,7 @@ from models.base import Base
 import json
 
 
+
 class Rectangle(Base):
     """Rectangle class inherit Base class
 
@@ -138,6 +139,14 @@ class Rectangle(Base):
  {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
+        """Update function
+
+        Args:
+        args: Argument
+        kwargs: Keyword args
+
+        Return: None
+        """
         if args:
             for i in range(len(args)):
                 if i == 0:
@@ -168,6 +177,9 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """To dictionary function
+
+        """
         return {"id": self.id,
                 "width": self.width,
                 "height": self.height,
