@@ -1,2 +1,2 @@
---shows all table
+--shows all table of a databse
 SHOW TABLES;
