@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     cur.execute(
             "SELECT * FROM states " +
-            "WHERE name LIKE BINARY '{}'" .format(state)
+            "WHERE name LIKE %s", (state, )
             )
     rows = cur.fetchall()
     for row in rows:
