@@ -16,8 +16,7 @@ if __name__ == '__main__':
 
     cur.execute(
             "SELECT * FROM states " +
-            "WHERE name = '" + sys.argv[4] + "' " +
-            "ORDER BY states.id ASC;"
+            "WHERE name LIKE BINARY '{}'" .format(sys.argv[4])
             )
     rows = cur.fetchall()
     for row in rows:
